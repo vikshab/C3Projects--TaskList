@@ -10,11 +10,11 @@ This project...
 - require SQLite to be installed on everyone's computers: `$ brew install sqlite`
 - needs a Gemfile so others are aware of its dependencies
 - needs a config.ru file; look at the structure in the SinatraSite project for an example
+- needs a database schema suitable for storing and organizing "tasks"
+- needs a database setup script that creates the necessary table(s) for the project.
 - should be started with rackup on the command line
 
 ## Breakfast
-
-- Create a database schema that is appropriate for persisting and working with a collection of tasks.
 
 - Create a class that will keep track of the low-level database interaction. The responsibility of this class is to create a database connection and....
 
