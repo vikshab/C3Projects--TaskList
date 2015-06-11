@@ -1,27 +1,17 @@
-require 'sqlite3'
+require 'sqlite3' # TODO: Is this line necessary?
 
 module TaskList
   class Database
     attr_reader :database_name
 
     def initialize(database_name)
-      @database_name = "db/#{ database_name }"
-    end
-
-    def your_custom_query_here(*args)
-      # santitize/validate your arguments
-
-      # prepare your statement
-
-      # call `query!` to interact with the database
-
-      # determine what should be returned
+      @database_path = "db/#{ database_name }"
     end
 
     private
 
     def query!(statement, *params)
-      db = SQLite3::Database.new database_name
+      db = SQLite3::Database.new(@database_path)
       db.execute statement, params
     rescue SQLite3::Exception => error
       # use this block to recover from an error
