@@ -4,6 +4,7 @@ require "./lib/task_data"
 
 class MySite < Sinatra::Base
   register Sinatra::Reloader
+  also_reload './lib/task_data'
 
   get '/' do
     erb :index
@@ -18,7 +19,7 @@ class MySite < Sinatra::Base
     params[:task] == "walk the dog"
     params[:description] == "he needs exercise"
 
-    my_task_data = TaskList::TaskData.new(task_data)
+    my_task_data = TaskList::TaskData.new("task_data")
     my_task_data.add_task(params[:task], params[:description])
     @all_tasks = my_task_data.display_list
 

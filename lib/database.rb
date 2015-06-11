@@ -5,7 +5,7 @@ module TaskList
     attr_reader :database_name
 
     def initialize(database_name)
-      @database_path = "db/#{ database_name }"
+      @database_path = "db/#{ database_name }.db"
     end
 
     private
@@ -22,4 +22,3 @@ module TaskList
     end
   end
 end
-

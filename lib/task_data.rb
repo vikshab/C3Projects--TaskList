@@ -10,7 +10,7 @@ module TaskList
   ####   end
 
   def add_task(task, description)
-    query!("INSERT INTO tasks (task, description) VALUES (?, ?);", task, descriptions)
+    query!("INSERT INTO tasks (task, description) VALUES (?, ?);", task, description)
   end
 
   def display_list
