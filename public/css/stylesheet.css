@@ -1,0 +1,17 @@
+body {
+  background-color: #a1e6a7;
+  width: 20%; /* modify how we did this*/
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.task {
+
+}
+
+.task_descr {
+padding-left: 1em;
+}
