@@ -10,9 +10,9 @@ module TaskList
 
     private
 
-    def query!(statement, *params)
+    def query!(statement)
       db = SQLite3::Database.new(@database_path)
-      db.execute statement, params
+      db.execute statement
     rescue SQLite3::Exception => error
       # use this block to recover from an error
       # consider giving the user a special message back
