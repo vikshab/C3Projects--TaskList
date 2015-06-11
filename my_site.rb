@@ -7,6 +7,9 @@ class MySite < Sinatra::Base
   also_reload './lib/task_data'
 
   get '/' do
+    my_task_data = TaskList::TaskData.new("task_data")
+    @all_tasks = my_task_data.display_list
+
     erb :index
   end
 

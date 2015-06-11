@@ -1,6 +1,7 @@
 <h1>Todo list</h1>
 
 <a href="/add_task">Add new task</a>
+
 <% @all_tasks.each_with_index do |task, index| %>
   <p><%= index + 1%>. <%= task[1] %></p>
   <p> - <%= task[2] %></p>
