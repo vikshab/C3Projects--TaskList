@@ -1,15 +1,42 @@
 body {
-  background-color: #a1e6a7;
-  width: 20%; /* modify how we did this*/
+  width: 50%; /* modify how we did this*/
   margin: auto;
+  background: url("/images/notebook.jpg") no-repeat center;
+  background-size: cover;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 20px;
 }
 
 h1 {
   text-align: center;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.form {
+  text-align: left;
+  padding: 300px 100px;
+}
+
+.todo_list {
+  text-align: left;
 }
 
 .task {
+  margin: left;
+}
 
+.add_new_task {
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 .task_descr {

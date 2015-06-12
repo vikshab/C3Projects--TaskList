@@ -1,8 +1,9 @@
-<h1>Todo List</h1>
+<div class="todo_list">
+  <h1>Todo List</h1><br/>
 
-<a href="/add_task">Add new task</a>
-
-<% @all_tasks.each_with_index do |task, index| %>
-  <p class="task"><%= index + 1%>. <%= task[1] %></p>
-  <p class="task_descr"> - <%= task[2] %></p>
-<% end %>
+    <a class="add_new_task" href="/add_task">Add new task</a>
+     <% @all_tasks.each_with_index do |task, index| %>
+       <p class="task"><%= index + 1%>. <%= task[1] %></p>
+       <p class="task_descr"> - <%= task[2] %></p>
+   <% end %>
+</div>
