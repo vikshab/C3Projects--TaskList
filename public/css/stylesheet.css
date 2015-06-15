@@ -42,3 +42,11 @@ a:visited {
 .task_descr {
 padding-left: 1em;
 }
+
+.task_completed {
+  text-decoration: line-through;
+}
+
+.task_descr_completed {
+  text-decoration: line-through;
+}

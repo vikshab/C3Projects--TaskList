@@ -18,11 +18,20 @@ class MySite < Sinatra::Base
     erb :add_task
   end
 
-  post '/' do
+  post '/add_task' do
     my_task_data = TaskList::TaskData.new("task_data")
     my_task_data.add_task(params[:task], params[:description])
+    redirect to '/'
+  end
+
+  post '/' do
+    my_task_data = TaskList::TaskData.new("task_data")
+    my_task_data.complete_tasks(params[:complete])
+
     @all_tasks = my_task_data.display_list
+    @title = "Todo List"
 
     erb :index
   end
+
 end

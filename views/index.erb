@@ -1,9 +1,25 @@
 <div class="todo_list">
   <h1>Todo List</h1><br/>
 
-    <a class="add_new_task" href="/add_task">Add new task</a>
-     <% @all_tasks.each_with_index do |task, index| %>
-       <p class="task"><%= index + 1%>. <%= task[1] %></p>
-       <p class="task_descr"> - <%= task[2] %></p>
-   <% end %>
+  <a class="add_new_task" href="/add_task">Add new task</a>
+
+  <form action="/" method="post" accept-charset="utf-8">
+    <% @all_tasks.each_with_index do |task, index| %>
+      <% if task[3].nil? %>
+        <p class="task">
+          <input type="checkbox" name="complete[]" value="<%= task[0] %>">
+          <%= index + 1%>. <%= task[1] %>
+        </p>
+        <p class="task_descr"> - <%= task[2] %></p>
+      <% else %>
+        <p class="task_completed">
+          <input type="checkbox" name="complete[]" value="<%= task[0] %>">
+          <%= index + 1%>. <%= task[1] %>
+        </p>
+        <p class="task_descr_completed"> - <%= task[2] %></p>
+      <% end %>
+
+    <% end %>
+    <input type="submit" value="Completed">
+  </form>
 </div>
