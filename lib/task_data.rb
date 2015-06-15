@@ -16,5 +16,11 @@ module TaskList
         query!("UPDATE tasks SET completed_on='#{Time.now}' WHERE id=#{task_id};")
       end
     end
+
+    def delete_tasks(tasks_to_delete)
+      tasks_to_delete.each do |task_id|
+        query!("DELETE FROM tasks WHERE id=#{task_id};")
+      end
+    end
   end
 end
