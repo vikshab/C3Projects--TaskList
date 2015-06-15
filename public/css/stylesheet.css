@@ -13,6 +13,10 @@ h1 {
   padding: 20px;
 }
 
+div {
+  display: block;
+}
+
 .form {
   text-align: left;
   padding: 300px 100px;
@@ -26,27 +30,26 @@ h1 {
   margin: left;
 }
 
-.add_new_task {
+.button {
   background-color: antiquewhite;
   padding: 10px;
+  margin: .5em;
 }
 
 a:link {
   text-decoration: none;
+  display: inline-block;
 }
 
 a:visited {
   text-decoration: none;
+  display: inline-block;
 }
 
 .task_descr {
 padding-left: 1em;
 }
 
-.task_completed {
-  text-decoration: line-through;
-}
-
-.task_descr_completed {
+.completed {
   text-decoration: line-through;
 }
