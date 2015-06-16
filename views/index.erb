@@ -4,18 +4,5 @@
   <a class="button" href="/add_task">Add new task</a>
   <a class="button" href="/delete_task">Delete task</a>
 
-  <form action="/" method="post" accept-charset="utf-8">
-    <% @all_tasks.each_with_index do |task, index| %>
-
-      <div <%= "class='completed'" unless task[3].nil? %> >
-        <label class="task">
-          <input type="checkbox" name="complete[]" value="<%= task[0] %>">
-          <%= index + 1 %>. <%= task[1] %>
-        </label>
-        <p class="task_descr"> - <%= task[2] %></p>
-      </div>
-
-    <% end %>
-    <input class="button" type="submit" value="Completed">
-  </form>
+  <%= erb :display_list, :locals => { :action =>"complete", :post_url => "/" } %>
 </div>

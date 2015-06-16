@@ -1,14 +1,1 @@
-<form action="/delete_task" method="post" accept-charset="utf-8">
-  <% @all_tasks.each_with_index do |task, index| %>
-
-    <div <%= "class='completed'" unless task[3].nil? %> >
-      <label class="task">
-        <input type="checkbox" name="delete[]" value="<%= task[0] %>">
-        <%= index + 1%>. <%= task[1] %>
-      </label>
-      <p class="task_descr"> - <%= task[2] %></p>
-    </div>
-
-  <% end %>
-  <input class="button" type="submit" value="Delete">
-</form>
+<%= erb :display_list, :locals => { :action =>"delete", :post_url => "/delete_task" } %>
