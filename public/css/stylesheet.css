@@ -1,40 +1,23 @@
 body {
-  width: 50%; /* modify how we did this*/
-  margin: auto;
-  background: url("/images/notebook.jpg") no-repeat center;
+  margin: 0px;
+  padding: 5%;
+  background: url("/images/ship.jpg") no-repeat;
+  background-color: #F0E4EE;
   background-size: cover;
   font-family: "Lucida Console", Monaco, monospace;
-  font-size: 20px;
+  font-size: 15px;
 }
 
-h1 {
+main {
+  text-align: left;
+  margin: auto;
+  width: 50%;
+}
+
+nav {
   text-align: center;
-  font-size: 30px;
-  padding: 20px;
-  margin-bottom: 1em;
-}
-
-div {
-  display: block;
-}
-
-.form {
-  text-align: left;
-  padding: 300px 100px;
-}
-
-.todo_list {
-  text-align: left;
-}
-
-.task {
-  margin: left;
-}
-
-.button {
-  background-color: antiquewhite;
-  padding: 10px;
-  margin: .5em;
+  padding: 1em;
+  font-size: 1.1em;
 }
 
 a:link {
@@ -45,6 +28,32 @@ a:link {
 a:visited {
   text-decoration: none;
   display: inline-block;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Apple Chancery", cursive;
+  font-size: 2em;
+  padding: 20px;
+  margin-bottom: 1em;
+}
+
+form label {
+  display: block;
+  padding: .5em;
+}
+
+.task {
+  margin: left;
+}
+
+.button {
+  background-color: #dfc3e5;
+  padding: .5em;
+  margin: .5em;
+  border: gray solid;
+  border-width: thin;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 .task_descr {

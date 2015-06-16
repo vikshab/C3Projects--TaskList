@@ -1,5 +1,4 @@
-# this file is not called anywhere, and it should instead
-# be run as part of the initial setup.
+# this file is run only once as part of initial setup
 
 require "sqlite3"
 

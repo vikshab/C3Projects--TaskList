@@ -1,8 +1,10 @@
-<div class="todo_list">
+<main>
   <h1>Todo List</h1>
 
-  <a class="button" href="/add_task">Add new task</a>
-  <a class="button" href="/delete_task">Delete task</a>
+  <nav>
+    <a class="button" href="/add_task">Add new task</a>
+    <a class="button" href="/delete_task">Delete task</a>
+  </nav>
 
   <%= erb :display_list, :locals => { :action =>"complete", :post_url => "/" } %>
-</div>
+</main>

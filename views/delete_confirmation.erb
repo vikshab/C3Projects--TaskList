@@ -1,10 +1,10 @@
-<h1>Are you sure you want to delete?</h1>
+<main>
+  <h1>Are you sure you want to delete?</h1>
 
-<form action="/delete_confirmation" method="post" accept-charset="utf-8">
-<input type="hidden" name="tasks_to_delete" value="<%= @tasks_to_delete %>">
-
-  <label><input type="radio" name="confirm" value="Yes">Yes</label>
-  <label><input type="radio" name="confirm" value="No">No</label>
-
-  <input class="button" type="submit" value="Confirm">
-</form>
+  <form action="/delete_confirmation" method="post" accept-charset="utf-8">
+  <input type="hidden" name="tasks_to_delete" value="<%= @tasks_to_delete %>">
+    <label><input type="radio" name="confirm" value="Yes">Yes</label>
+    <label><input type="radio" name="confirm" value="No">No</label>
+    <input class="button" type="submit" value="Confirm">
+  </form>
+</main>
